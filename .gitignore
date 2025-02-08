@@ -6,6 +6,10 @@ cmake_install.cmake
 CTestTestfile.cmake
 .developer/
 .idea/
+build/
+*.json
+.qtc_clangd/
+cmake-build-debug/
 *.o
 *.a
 *.so
