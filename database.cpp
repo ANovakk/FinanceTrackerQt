@@ -4,7 +4,7 @@
 
 Database::Database() {
     db = QSqlDatabase::addDatabase("QSQLITE");
-    QString path = QCoreApplication::applicationDirPath() + "/database.db";
+    QString path = "/Users/andreynovak/CLionProjects/FinanceTrackerQt/database.db";
     qDebug() << path;
     db.setDatabaseName(path);
 }
