@@ -1,0 +1,20 @@
+# ninja log v6
+566	645	1739044684311195277	FinanceTrackerQt.app/Contents/MacOS/FinanceTrackerQt	90485e733cc3dc20
+31	529	1739044683775901415	CMakeFiles/FinanceTrackerQt.dir/main.cpp.o	a1f4e6b4e4805238
+9	31	1739044683753498968	FinanceTrackerQt_autogen/timestamp	1392497d788a1869
+32	533	1739044509868930794	CMakeFiles/FinanceTrackerQt.dir/database.cpp.o	5c5b8a0c6654dbae
+9	31	1739044683753498968	/Users/andreynovak/CLionProjects/FinanceTrackerQt/build/Qt_6_8_2_for_macOS-Debug/FinanceTrackerQt_autogen/mocs_compilation.cpp	1392497d788a1869
+9	31	1739044683753498968	FinanceTrackerQt_autogen/mocs_compilation.cpp	1392497d788a1869
+9	31	1739044683753498968	/Users/andreynovak/CLionProjects/FinanceTrackerQt/build/Qt_6_8_2_for_macOS-Debug/FinanceTrackerQt_autogen/timestamp	1392497d788a1869
+300	1020	1739043011310559571	CMakeFiles/FinanceTrackerQt.dir/FinanceTrackerQt_autogen/mocs_compilation.cpp.o	baa7df861496d44f
+301	759	1739043011310874948	CMakeFiles/FinanceTrackerQt.dir/transaction.cpp.o	4af5917349feb8cd
+301	935	1739043011310960157	CMakeFiles/FinanceTrackerQt.dir/transactionManager.cpp.o	854abb11bad34d67
+3	148	1739043011001925436	build.ninja	1125f894bcf0815f
+31	566	1739044683776023164	CMakeFiles/FinanceTrackerQt.dir/mainwindow.cpp.o	baa5ef4b1dfe4e5c
+8	32	1739044728574378287	FinanceTrackerQt_autogen/timestamp	1392497d788a1869
+8	32	1739044728574378287	FinanceTrackerQt_autogen/mocs_compilation.cpp	1392497d788a1869
+8	32	1739044728574378287	/Users/andreynovak/CLionProjects/FinanceTrackerQt/build/Qt_6_8_2_for_macOS-Debug/FinanceTrackerQt_autogen/timestamp	1392497d788a1869
+8	32	1739044728574378287	/Users/andreynovak/CLionProjects/FinanceTrackerQt/build/Qt_6_8_2_for_macOS-Debug/FinanceTrackerQt_autogen/mocs_compilation.cpp	1392497d788a1869
+33	514	1739044728599154136	CMakeFiles/FinanceTrackerQt.dir/main.cpp.o	a1f4e6b4e4805238
+33	548	1739044728599295719	CMakeFiles/FinanceTrackerQt.dir/mainwindow.cpp.o	baa5ef4b1dfe4e5c
+548	627	1739044729114275537	FinanceTrackerQt.app/Contents/MacOS/FinanceTrackerQt	90485e733cc3dc20
