@@ -24,5 +24,7 @@ private:
     QSqlTableModel *model;
 
     void setupModel();
+    void showPageOverview();
+    void showPageTransactions();
 };
 #endif // MAINWINDOW_H
