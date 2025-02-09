@@ -37,32 +37,32 @@ int main(int argc, char *argv[]) {
     //     transactionManager.addTransaction(transaction);
     // }
 
-    QList<Transaction> transactions;
-    transactions = transactionManager.getAllTransactions();
-    print_transactions(transactions);
-
-    qDebug() << "Transactions by date";
-    QString currentDate = "2021-02-06";
-    transactions = transactionManager.getTransactionsByDate(currentDate);
-    print_transactions(transactions);
-
-    qDebug() << "Transactions by category";
-    QString currentCategory = "Car";
-    transactions = transactionManager.getTransactionsByCategory(currentCategory);
-    print_transactions(transactions);
-
-
-    transactions = transactionManager.getFilteredTransactions("", "", "", "04", "2025");
-    qDebug() << "Transactions: 2025";
-    print_transactions(transactions);
-
-    transactions = transactionManager.getFilteredTransactions("Income", "", "", "", "2024");
-    qDebug() << "Transactions: Income 2025";
-    print_transactions(transactions);
-
-    transactions = transactionManager.getFilteredTransactions("", "Freelance", "", "", "");
-    qDebug() << "Transactions: Games";
-    print_transactions(transactions);
+    // QList<Transaction> transactions;
+    // transactions = transactionManager.getAllTransactions();
+    // print_transactions(transactions);
+    //
+    // qDebug() << "Transactions by date";
+    // QString currentDate = "2021-02-06";
+    // transactions = transactionManager.getTransactionsByDate(currentDate);
+    // print_transactions(transactions);
+    //
+    // qDebug() << "Transactions by category";
+    // QString currentCategory = "Car";
+    // transactions = transactionManager.getTransactionsByCategory(currentCategory);
+    // print_transactions(transactions);
+    //
+    //
+    // transactions = transactionManager.getFilteredTransactions("", "", "", "04", "2025");
+    // qDebug() << "Transactions: 2025";
+    // print_transactions(transactions);
+    //
+    // transactions = transactionManager.getFilteredTransactions("Income", "", "", "", "2024");
+    // qDebug() << "Transactions: Income 2025";
+    // print_transactions(transactions);
+    //
+    // transactions = transactionManager.getFilteredTransactions("", "Freelance", "", "", "");
+    // qDebug() << "Transactions: Games";
+    // print_transactions(transactions);
 
     return app.exec();
 }

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QStringListModel>
 
 MainWindow::MainWindow(TransactionManager &transactionManager, QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow), transactionManager(transactionManager) {
@@ -17,6 +18,7 @@ MainWindow::MainWindow(TransactionManager &transactionManager, QWidget *parent)
     ui->TransactionDate->setDate(QDate::currentDate());
 
     setupModel();
+    setupListViewModel();
 }
 
 MainWindow::~MainWindow() {
@@ -31,6 +33,23 @@ void MainWindow::setupModel() {
 
     ui->tableView->setModel(model);
     ui->tableView->resizeColumnsToContents();
+}
+
+void MainWindow::setupListViewModel() {
+    listViewModel = new QStringListModel(this);
+
+    QStringList transactionList;
+
+    for (const Transaction &transaction : transactionManager.getAllTransactions()) {
+        QString transactionInfo = QString("Type: %1 | Amount: %2 | Date: %3")
+                                      .arg(transaction.getType())
+                                      .arg(transaction.getAmount())
+                                      .arg(transaction.getDate());
+        transactionList.append(transactionInfo);
+    }
+
+    listViewModel->setStringList(transactionList);
+    ui->listView->setModel(listViewModel);
 }
 
 void MainWindow::showPageOverview() {

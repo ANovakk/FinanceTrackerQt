@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSqlTableModel>
+#include <QStringListModel>
 #include "database.h"
 #include "transactionManager.h"
 
@@ -23,9 +24,11 @@ public:
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
+    QStringListModel *listViewModel;
     TransactionManager &transactionManager;
 
     void setupModel();
+    void setupListViewModel();
     void showPageOverview();
     void showPageTransactions();
     void addTransaction();
