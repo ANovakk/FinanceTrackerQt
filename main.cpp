@@ -25,10 +25,10 @@ int main(int argc, char *argv[]) {
     db.open();
     db.createTable();
 
-    MainWindow w;
-    w.show();
-
     TransactionManager transactionManager(db);
+
+    MainWindow w(transactionManager);
+    w.show();
 
     // QList<Transaction> transactions_add = {
     //     Transaction("Income", 120, "Games", "2022-12-12", "Minecraft", "USD")};

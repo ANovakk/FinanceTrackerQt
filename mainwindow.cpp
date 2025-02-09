@@ -2,8 +2,8 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(TransactionManager &transactionManager, QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow), transactionManager(transactionManager) {
     ui->setupUi(this);
 
     connect(ui->buttonOverviewPage, &QPushButton::clicked, this, &MainWindow::showPageOverview);
@@ -58,10 +58,9 @@ void MainWindow::addTransaction() {
     ui->TransactionCategory->setCurrentIndex(0);
     ui->TransactionNote->clear();
 
-    qDebug() << type;
-    qDebug() << amount;
-    qDebug() << category;
-    qDebug() << date;
-    qDebug() << note;
-    qDebug() << currency;
+    Transaction transaction = Transaction(type, amount.toDouble(), category, date.toString("yyyy-MM-dd"), note, currency);
+
+    transactionManager.addTransaction(transaction);
+    model->select();
+    ui->tableView->resizeColumnsToContents();
 }
