@@ -22,7 +22,6 @@ public:
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
-    Database db;
 
     void setupModel();
 };

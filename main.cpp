@@ -20,14 +20,22 @@ void print_transactions(QList<Transaction> transactions) {
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    MainWindow w;
-    w.show();
 
     Database db;
     db.open();
     db.createTable();
 
+    MainWindow w;
+    w.show();
+
     TransactionManager transactionManager(db);
+
+    // QList<Transaction> transactions_add = {
+    //     Transaction("Income", 120, "Games", "2022-12-12", "Minecraft", "USD")};
+    //
+    // for (Transaction& transaction : transactions_add) {
+    //     transactionManager.addTransaction(transaction);
+    // }
 
     QList<Transaction> transactions;
     transactions = transactionManager.getAllTransactions();
