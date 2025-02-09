@@ -6,6 +6,7 @@
 #include <QStringListModel>
 #include "database.h"
 #include "transactionManager.h"
+#include "customdelegate.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

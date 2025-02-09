@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "customdelegate.h"
 #include <QMessageBox>
 #include <QStringListModel>
 
@@ -50,6 +51,9 @@ void MainWindow::setupListViewModel() {
 
     listViewModel->setStringList(transactionList);
     ui->listView->setModel(listViewModel);
+
+    CustomDelegate *delegate = new CustomDelegate(this);
+    ui->listView->setItemDelegate(delegate);
 }
 
 void MainWindow::showPageOverview() {
