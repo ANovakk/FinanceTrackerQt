@@ -7,8 +7,16 @@ CustomDelegate::CustomDelegate(QObject *parent)
 void CustomDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const {
     QStyledItemDelegate::paint(painter, option, index);
 
+    QRect buttonRect(option.rect.right() - 50, option.rect.top(), 40, option.rect.height());
+
+    painter->save();
+    painter->setPen(Qt::black);
+    painter->setBrush(Qt::NoBrush);
+    painter->drawRect(buttonRect);
+    painter->restore();
+
     QStyleOptionButton button;
-    button.rect = QRect(option.rect.right() - 50, option.rect.top(), 40, option.rect.height());
+    button.rect = buttonRect;
     button.text = "Click";
     button.state = QStyle::State_Enabled;
 
