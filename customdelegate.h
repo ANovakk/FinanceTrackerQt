@@ -14,7 +14,6 @@ class CustomDelegate : public QStyledItemDelegate {
 public:
     explicit CustomDelegate(QObject *parent = nullptr);
 
-    // Переопределение методов для отрисовки и обработки событий
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) override;
 };

@@ -52,8 +52,17 @@ void MainWindow::setupListViewModel() {
     listViewModel->setStringList(transactionList);
     ui->listView->setModel(listViewModel);
 
+    // Disable editing for QListView
+    ui->listView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
     CustomDelegate *delegate = new CustomDelegate(this);
     ui->listView->setItemDelegate(delegate);
+
+    ui->listView->setStyleSheet(
+        "QListView::item {"
+        "    height: 60px;"
+        "}"
+    );
 }
 
 void MainWindow::showPageOverview() {
