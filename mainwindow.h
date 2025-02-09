@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QSqlTableModel>
+#include "database.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +21,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QSqlTableModel *model;
+    Database db;
+
+    void setupModel();
 };
 #endif // MAINWINDOW_H
