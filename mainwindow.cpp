@@ -58,11 +58,17 @@ void MainWindow::setupListViewModel() {
     CustomDelegate *delegate = new CustomDelegate(this);
     ui->listView->setItemDelegate(delegate);
 
+    connect(delegate, &CustomDelegate::deleteButtonClicked, this, &MainWindow::onDeleteButtonClicked);
+
     ui->listView->setStyleSheet(
         "QListView::item {"
         "    height: 60px;"
         "}"
     );
+}
+
+void MainWindow::onDeleteButtonClicked(int row) {
+    qDebug() << "Delete requested for row:" << row;
 }
 
 void MainWindow::showPageOverview() {

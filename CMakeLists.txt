@@ -28,6 +28,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         transactionManager.h transactionManager.cpp
         database.h database.cpp
             customdelegate.h customdelegate.cpp
+            deletedialog.h deletedialog.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET FinanceTrackerQt APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

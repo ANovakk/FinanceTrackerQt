@@ -10,7 +10,7 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 QT_END_NAMESPACE
 
@@ -33,5 +33,9 @@ private:
     void showPageOverview();
     void showPageTransactions();
     void addTransaction();
+
+    private slots:
+        void onDeleteButtonClicked(int row);
 };
+
 #endif // MAINWINDOW_H
