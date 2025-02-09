@@ -1,8 +1,9 @@
-#include <QCoreApplication>
 #include <QDate>
+#include <QApplication>
 #include "database.h"
 #include "transaction.h"
 #include "transactionManager.h"
+#include "mainwindow.h"
 
 void print_transactions(QList<Transaction> transactions) {
     for (const Transaction &t : transactions) {
@@ -18,7 +19,9 @@ void print_transactions(QList<Transaction> transactions) {
 }
 
 int main(int argc, char *argv[]) {
-    QCoreApplication app(argc, argv);
+    QApplication app(argc, argv);
+    MainWindow w;
+    w.show();
 
     Database db;
     db.open();
