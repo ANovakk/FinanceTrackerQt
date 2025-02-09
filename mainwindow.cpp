@@ -9,7 +9,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->buttonOverviewPage, &QPushButton::clicked, this, &MainWindow::showPageOverview);
     connect(ui->buttonTransactionsPage, &QPushButton::clicked, this, &MainWindow::showPageTransactions);
     connect(ui->buttonAddTransaction, &QPushButton::clicked, this, &MainWindow::addTransaction);
+
+    // Delete focus from any field
     this->setFocus();
+
+    // Set current date
+    ui->TransactionDate->setDate(QDate::currentDate());
 
     setupModel();
 }
