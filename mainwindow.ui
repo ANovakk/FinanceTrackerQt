@@ -18,13 +18,13 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>140</y>
+      <y>130</y>
       <width>781</width>
-      <height>381</height>
+      <height>741</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QTableView" name="tableView">
@@ -42,14 +42,117 @@
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>90</y>
+        <x>290</x>
+        <y>10</y>
         <width>161</width>
         <height>41</height>
        </rect>
       </property>
       <property name="text">
        <string>Add transaction</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="TransactionDate">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>310</y>
+        <width>110</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="TransactionAmount">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>104</width>
+        <height>71</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="TransactionType">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>103</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Expense</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Income</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="TransactionCategory">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>103</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Groceries</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QTextEdit" name="TransactionNote">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>104</width>
+        <height>71</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="TransactionCurrency">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>450</y>
+        <width>103</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>USD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EUR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KZT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="buttonAddTransaction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>510</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Submit</string>
       </property>
      </widget>
     </widget>

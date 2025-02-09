@@ -26,5 +26,6 @@ private:
     void setupModel();
     void showPageOverview();
     void showPageTransactions();
+    void addTransaction();
 };
 #endif // MAINWINDOW_H
